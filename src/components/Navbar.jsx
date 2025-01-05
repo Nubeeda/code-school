@@ -1,5 +1,24 @@
-"use client";
-import {Link} from "react-router"
+
+import {Link} from "react-router";
+
+const menus =[
+  {
+    lable: "Home",
+    href: "/",
+  },
+  {
+    lable: "Teachers",
+    href: "/teachers",
+  },
+  {
+    lable: "Holidays",
+    href: "/holiday",
+  },
+  {
+    lable: "Contact-Us",
+    href: "/contact",
+  },
+]
 const Navbar=()=>{
     return(
         <nav className="bg-white flex justify-between py-0 px-16 shadow-slate-300 shadow-lg">
@@ -9,29 +28,20 @@ const Navbar=()=>{
   </div>
      
         <ul className="m-0 p-0 gap-12 flex items-center">
-          <li className="text-lg text-[#323232]">
-            <Link to="/">
-            Home
+          {
+            menus.map((menu,index)=>{
+              return(
+                <li key={index}
+                className="text-lg text-[#323232]">
+            <Link to={menu.href} key={index}>
+            {menu.lable}
             </Link>
           </li>
+              )
+            })
+          }
 
-          <li className="text-lg text-[#323232]">
-            <Link to="/teachers">
-            Teachers
-            </Link>
-          </li>
-
-          <li className="text-lg text-[#323232]">
-            <Link to="/holiday">
-            Holidays
-            </Link>
-          </li>
-
-          <li className="text-lg text-white bg-[#8700ff] py-2 px-4 rounded-lg hover:bg-yellow-600 ">
-            <Link to="/contact">
-            Contact Us
-            </Link>
-          </li>
+          
         </ul>
       </nav>
     )
