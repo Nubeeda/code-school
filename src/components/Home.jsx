@@ -66,7 +66,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 px-8 gap-16">
+        <div className="grid grid-cols-2 p-12 gap-20">
           <div>
             <Swiper className="mySwiper rounded-md">
               <SwiperSlide>
