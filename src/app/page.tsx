@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import 'animate.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import 'remixicon/fonts/remixicon.css'

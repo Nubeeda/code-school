@@ -48,7 +48,7 @@ const Holidays=()=>{
                     <tbody>
                         {
                             holiday.map((item,index)=>(
-                                <tr className="text-center">
+                                <tr className="text-center" key={index}>
                                     <td className="p-3 border-[1px solid #ccc] border-b">
                                         {index+1}
                                     </td>

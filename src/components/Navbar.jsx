@@ -21,7 +21,7 @@ const menus =[
 ]
 const Navbar=()=>{
     return(
-        <nav className="bg-white flex justify-between py-0 px-16 shadow-slate-300 shadow-lg">
+        <nav className="bg-white flex justify-between py-0 px-16 shadow-slate-300 shadow-lg sticky top-0 left-0 z-50">
   <div className="flex items-center gap-2">
   <img src="./images/logo.png" className="w-24 h-24" />
   <h1 className="text-2xl font-bold">CodeSchool</h1>

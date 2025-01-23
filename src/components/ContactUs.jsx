@@ -10,15 +10,15 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
 
   const submitlist = (e) => {
-    alert("hello")
-    e.preventDefult();
+    
+    // e.preventDefult();
     console.log(firstname,email,message)
-      // Swal.fire({
-      //   title: "success",
-      //   text: "Congrats!",
-      //   icon: "success",
-      //   confirmButtonText: "Cool",
-      // });
+      Swal.fire({
+        title: "success",
+        text: "Congrats!",
+        icon: "success",
+        confirmButtonText: "Cool",
+      });
   };
   return (
     <div>
@@ -28,8 +28,8 @@ const ContactUs = () => {
         <img className="w-1/2" src="./images/contact.svg" />
 
         <div className="w-1/2 ">
-          <form 
-          onSubmit={submitlist}
+          <div 
+          // onSubmit={submitlist}
           className="flex gap-6 flex-col ">
             <div className="flex pb-2 flex-col ">
               <label className=" font-medium text-lg">Firstname</label>
@@ -69,12 +69,12 @@ const ContactUs = () => {
               />
             </div>
             <button
-            type="submit"
+            onClick={()=>submitlist()}
             className="bg-blue-600 w-20 p-2 font-medium text-white rounded-md"
           >
             Submit
           </button>
-          </form>
+          </div>
           
         </div>
       </div>
